@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nelson Mendez</title>
     <link rel="stylesheet" href="styles.css">
-   
 
 </head>
 <body>
     
-    <div class="title"><h1 class="wrapper">Nelson Mendez Lab 2: CSS Selectors</h1></div>
-    <div><nav ><a class="wrapper" href="selectors.html">Selectors</a><a class="wrapper" href="index.html">Main Page</a></nav></div>
+    <div class="wrapper"><h1 class="title">Nelson Mendez Lab 2: CSS Selectors</h1></div>
+    <div class="wrapper"><nav ><a class="wrapper" href="selectors.html">Selectors</a><a class="wrapper" href="index.html">Main Page</a></nav></div>
     <h2 class="subtitle">First, the basics.</h2>
-    <p>You need the following to build your website</p>
+    <p>You need the following to build your website.</p>
     <div class="section_1">
         <ul>
             <li>HTML and CSS</li>
@@ -22,9 +21,11 @@
             <li>And other web development frameworks</li>
         </ul>
 
-        <h5>You should list your top 3 goals for the class below</h5>
+        
 
         <ol>
+            <p class="subtitle">You should list your top 3 goals for the class below</p>
+            <br>
             <li>Learn front-end web design</li>
             <li>Learn new programming languages</li>
             <li>Learn how to work with others in a technical space</li>
@@ -33,12 +34,11 @@
     </div>
 
     <div class="section_2">
-        <h4 class="wrapper">Let's Try Some Inline Elements</h4>
-        <p>
-            Sometimes you want to <em>draw attention to something</em> in a line of text
-            <br>Sometimes you want to <strong>strongly emphasize Something</strong> in the text
-            <br>Sometimes you want to <strong><em>do both</em></strong>
-        </p>
+        <h2 class="subtitle">Let's Try Some Inline Elements</h2>
+        <p class="default">Sometimes you want to <em>draw attention to something</em> in a line of text.</p>
+        <p class="default">Sometimes you want to <strong>strongly emphasize Something</strong> in the text</p>
+        <p class="default">Sometimes you want to <strong><em>do both</em></strong></p>
+       
     </div>
 
     <div class="section_3">
@@ -50,18 +50,36 @@
                 <br> Neither can image tags, or hard lines. 
                 <br> Add a hard line under here, and break the previous two lines using a soft line break.<br>
             </p>
-            
+            <hr>
         
     </div>
 
-    <hr>
+    
     <div class="section_4">
-        <h2 class="text">Images</h2>
-        <p class="text">Include the four images in the /images folder below</p>
-        <p>Don't forget to use alt text on your images. It's important for accessibilty</p>
+       
+        <div class="text">
+            <ul>
+                <h2 class="subtitle">Images</h2>
+                <p class="default">Include the four images in the /images folder below</p>
+                <p class="default">Don't forget to use alt text on your images. It's important for accessibilty</p>
+                
+            </ul>
+            
+        </div>
+        <div class="carousel"><div class="slides">
+            <img src="images/onigiri_1.png" alt="Mochi smiling">
+            <img src="images/onigiri_2.png" alt="Mochi smiling with mouth closed">
+            <img src="images/onigiri_3.png" alt="Mochi smiling with eyes closed">
+            <img src="images/onigiri_4.png" alt="Mochi smiling sideways">
+        </div></div>
+        
+        
     </div>
 
-    <a href="https://github.com/Nelson-Menro/INST377-Lab-Work">My github repository can be found here</a>
-    <p>If yout want your repo to be private, be sure to invite prof A as a "collaborator"</p>
+    <br>
+    <br>
+    <a class="default" href="https://github.com/Nelson-Menro/INST377-Lab-Work">My github repository can be found here</a>
+    <br>
+    <p class="subtitle">If you want your repo to be private, be sure to invite prof A as a "collaborator."</p>
 </body>
 </html>
