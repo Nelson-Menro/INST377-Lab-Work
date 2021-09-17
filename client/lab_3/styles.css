@@ -13,6 +13,7 @@
     height: 10%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .thirdLayer{
@@ -24,6 +25,7 @@
 .fourthLayer{
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
 }
 .fifthLayer{
     justify-content: center;
