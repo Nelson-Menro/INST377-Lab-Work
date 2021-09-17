@@ -1,8 +1,6 @@
 .topRow{
-    background-color: lightseagreen;
-    height: 5%;
-    flex-wrap: wrap;
-    display: flexbox;
+    display: flex;
+    background-color: lightseagreen;    
 }
 
 .topText{
@@ -12,10 +10,8 @@
 
 .secondLayer{
     background-color: rgba(2, 98, 177, 0.521);
-    height: 10%;
     display: flex;
     justify-content: center;
-    flex-basis: auto;
     flex-wrap: wrap;
 }
 
