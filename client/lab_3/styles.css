@@ -1,7 +1,8 @@
 .topRow{
     background-color: lightseagreen;
     height: 5%;
-    flex-basis: auto;
+    flex-wrap: wrap;
+    display: flexbox;
 }
 
 .topText{
@@ -15,23 +16,25 @@
     display: flex;
     justify-content: center;
     flex-basis: auto;
+    flex-wrap: wrap;
 }
 
 .thirdLayer{
     justify-content: center;
     display: flex;
     background-color:aquamarine;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .fourthLayer{
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
 }
 .fifthLayer{
     justify-content: center;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 .footerOne{
