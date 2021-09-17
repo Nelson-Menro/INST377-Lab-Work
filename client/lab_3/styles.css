@@ -1,8 +1,6 @@
 .topRow{
     background-color: lightseagreen;
-    width:100%;
-    position: relative;
-
+    height: 5%;
 }
 
 .topText{
@@ -12,5 +10,34 @@
 
 .secondLayer{
     background-color: rgba(2, 98, 177, 0.521);
-    display: flexbox;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.thirdLayer{
+    justify-content: center;
+    display: flex;
+    background-color:aquamarine;
+}
+
+.fourthLayer{
+    justify-content: center;
+    display: flex;
+}
+.fifthLayer{
+    justify-content: center;
+    display: flex;
+}
+
+.footerOne{
+    background-color: rgba(2, 98, 177, 0.521);
+}
+
+.footerTwo{
+    background-color:aquamarine;
+}
+
+.footerThree{
+    background-color: rgba(2, 98, 177, 0.521);
 }
