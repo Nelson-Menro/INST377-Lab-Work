@@ -13,13 +13,13 @@
     height: 10%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .thirdLayer{
     justify-content: center;
     display: flex;
     background-color:aquamarine;
+    flex-wrap: nowrap;
 }
 
 .fourthLayer{
@@ -30,6 +30,7 @@
 .fifthLayer{
     justify-content: center;
     display: flex;
+    flex-wrap: wrap-reverse;
 }
 
 .footerOne{
