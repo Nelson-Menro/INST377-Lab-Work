@@ -1,3 +1,14 @@
 .topRow{
     background-color: lightseagreen;
+    width:100%;
+}
+
+.topText{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.secondLayer{
+    background-color: rgba(12, 189, 233, 0.521);
+    display: flexbox;
 }
