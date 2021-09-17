@@ -1,6 +1,8 @@
 .topRow{
     background-color: lightseagreen;
     width:100%;
+    position: relative;
+
 }
 
 .topText{
@@ -9,6 +11,6 @@
 }
 
 .secondLayer{
-    background-color: rgba(12, 189, 233, 0.521);
+    background-color: rgba(2, 98, 177, 0.521);
     display: flexbox;
 }
