@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .topRow{
     display: flex;
     background-color: lightseagreen;    
@@ -9,7 +14,7 @@
 }
 
 .secondLayer{
-    background-color: rgba(2, 98, 177, 0.521);
+    background-color: #5995DA;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -19,13 +24,14 @@
     justify-content: center;
     display: flex;
     background-color:aquamarine;
-    flex-wrap: wrap;
+    background-color: #D6E9FE;
 }
 
 .fourthLayer{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    align-items:flex-start;
 }
 .fifthLayer{
     justify-content: center;
@@ -33,14 +39,25 @@
     flex-wrap: wrap;
 }
 
-.footerOne{
-    background-color: rgba(2, 98, 177, 0.521);
+.footer{
+    display: flex;
+    border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
 }
+
+
 
 .footerTwo{
-    background-color:aquamarine;
+    flex: initial;
+    width: 300px;
+
 }
 
+.footerOne,
 .footerThree{
-    background-color: rgba(2, 98, 177, 0.521);
+    background-color: #5995DA;
+  flex: initial;
+  width: 300px;
 }
