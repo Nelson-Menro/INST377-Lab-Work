@@ -6,7 +6,8 @@ document.addEventListener( 'DOMContentLoaded',  ()  => {
     let birdLeft = 220;
     let birdBottom = 100;
     let gravity = 2;
-
+    let gap = 430;
+    let isGameOver = false;
 
     function startGame(){
         birdBottom -= gravity;
@@ -15,7 +16,7 @@ document.addEventListener( 'DOMContentLoaded',  ()  => {
     }
 
     //starts game interval
-    let timerId = setInterval(startGame, 20); 
+    let gameTimerId = setInterval(startGame, 20); 
 
 
     //stops the game interval
@@ -44,12 +45,54 @@ document.addEventListener( 'DOMContentLoaded',  ()  => {
         
         //creates div
         const obstacle  = document.createElement('div');
-        obstacle.classList.add('obstacle');
+        const topObstacle = document.createElement('div');
+
+        if(!isGameOver) {
+            obstacle.classList.add('obstacle');
+            topObstacle.classList.add('topObstacle');
+        }
         gameDisplay.appendChild(obstacle);
+        gameDisplay.appendChild(topObstacle);
         obstacle.style.left = obstacleLeft + 'px';
+        topObstacle.style.left = obstacleLeft + 'px';
         obstacle.style.bottom = obstacleBottom + 'px';
+        topObstacle.style.bottom = obstacleBottom + gap + 'px';
+
+
+        function moveObstacle(){
+            obstacleLeft -= 2;
+            obstacle.style.left = obstacleLeft + 'px';
+            topObstacle.style.left = obstacleLeft + 'px';
+
+
+            if(obstacle.style.left === -60){
+                clearInterval(timerId);
+                gameDisplay.removeChild(obstacle);
+                gameDisplay.removeChild(topObstacle);
+            }
+
+            if(obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220  && (birdBottom < obstacleBottom+115 || birdBottom > obstacleBottom + gap - 230) || 
+            birdBottom === 0){
+                gameOver();
+                clearInterval(timerId);
+            }
+           
+        }
+    
+        let timerId = setInterval(moveObstacle, 20);
+        if(!isGameOver) {
+            setTimeout(generateObstacles, 3000);
+        }
+    }
+    generateObstacles();
+
+
+    function gameOver(){
+        clearInterval(gameTimerId);
+        isGameOver = true; 
+        document.removeEventListener('keyup', control);
+        console.log('Game ended')
     }
 
 
-    generateObstacles();
 })
