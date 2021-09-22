@@ -25,3 +25,10 @@
     height: 60px;
     width: 45px;
 }
+
+.obstacle{
+    background-color: green;
+    height: 300px;
+    width: 60px;
+    position: absolute;
+}
