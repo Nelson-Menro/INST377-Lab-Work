@@ -31,12 +31,17 @@
     background-color: #D6E9FE;
 }
 
-.fourthLayer{
+.carousel{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     align-items:flex-start;
 }
+
+.carousel_item{
+    
+}
+
 .fifthLayer{
     justify-content: center;
     display: flex;
