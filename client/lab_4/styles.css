@@ -3,10 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    margin: 0; flex-wrap: wrap; 
+    flex-direction: column; 
+    display: flex;
+}
 .topRow{
     display: flex;
     background-color: lightseagreen;    
     height: 5%;
+    margin-bottom: 0%;
+}
+
+.thirdDiv{
+    display: flex; 
+    justify-content: center; 
+    padding-top: 10px;
 }
 
 .topText{
@@ -71,6 +84,10 @@
     height: 25px;
 }
 
+.carousel .carousel_actions button:active, carousel .carousel_actions button:focus{
+    border: 0.2em solid rgb(1, 153, 52);
+}
+
 .carousel .carousel_actions button#carousel_button--previous{
     margin-left: 20px;
     background-color: orange;
@@ -110,4 +127,59 @@
     background-color: #5995DA;
   flex:auto;
   width: 300px;
+}
+
+.fourthLayer{
+    justify-content: space-between;
+    display: flex; 
+    align-content: stretch;
+}
+
+.twoLinks{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.awesome{
+    width: 900px;
+        height: 300px;
+        display: flex;
+        justify-content: space-between; 
+        flex-direction: column;
+}
+
+.awesomeLogo{
+    padding-top: 10%;
+}
+
+.mainPage{
+    display: flex; 
+    justify-content: space-between;          
+    align-items: baseline; 
+    border-style: solid;
+    border-color: white; 
+    width: 300px; 
+    height: 34px; 
+}
+.fourthDiv{
+    border-color: white; 
+    border-style: solid; 
+    display: flex; 
+    justify-content: space-between; 
+    width: 750px; 
+    height: 40px; 
+}
+
+.links{
+    color: white;
+}
+
+.date{
+    color: white;
+}
+
+.lastDiv{
+    justify-content: space-between;
+    display: flex; 
+    align-content: stretch;
 }
