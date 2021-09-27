@@ -18,16 +18,17 @@ function updateSlidePosition(){
     //loop through image array
     for(let slide of slides){
         slide.classList.remove('carousel_item--visible');
-        slide.classList.add('carousel_item--hidden');
+        slides[slidePosition].classList.add('carousel_item--visible');
+        
     }
 
-    slides[slidePosition].classList.add('carousel_item--visible');
+    
 }
 
 function nextSlide(){
     //if at last slide, then go back to starting
     
-    if(slidePosition == totalSlides -1){
+    if(slidePosition == totalSlides - 1){
         slidePosition = 0;
     }else{
         slidePosition++;

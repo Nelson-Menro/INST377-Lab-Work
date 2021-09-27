@@ -32,8 +32,9 @@
 }
 
 .carousel{
+    display: flex;
+    justify-content: center;
     overflow: hidden;
-    max-width: 600px;
     position: relative;
 }
 
@@ -55,27 +56,29 @@
 .carousel .carousel_actions{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content:space-evenly;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .carousel .carousel_actions button{
-    border-radius: 50px;
-    border: 0;
+    border-radius: 5px;
+    border: 20px;
     font-weight: bold;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 25px;
 }
 
 .carousel .carousel_actions button#carousel_button--previous{
     margin-left: 20px;
+    background-color: orange;
 }
 
 .carousel .carousel_actions button#carousel_button--next{
     margin-right: 20px;
+    background-color:rgb(206, 206, 206);
 }
 
 .fifthLayer{
