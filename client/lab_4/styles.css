@@ -32,14 +32,50 @@
 }
 
 .carousel{
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    align-items:flex-start;
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
 }
 
-.carousel_item{
-    
+.carousel .carousel_item,
+.carousel .carousel_item--hidden{
+    display: none;
+}
+
+.carousel .carousel_item img{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.carousel .carousel_item--visible{
+    display: block;
+}
+
+.carousel .carousel_actions{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel_actions button{
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carousel_actions button#carousel_button--previous{
+    margin-left: 20px;
+}
+
+.carousel .carousel_actions button#carousel_button--next{
+    margin-right: 20px;
 }
 
 .fifthLayer{
