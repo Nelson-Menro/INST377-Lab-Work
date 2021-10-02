@@ -25,3 +25,87 @@ body {
   max-width: 960px;
   margin-top: 25px;
 }
+
+.empty{
+  height: 30px;
+}
+
+.horizontal_empty{
+  width: 15%;
+}
+
+#top_bar{
+  background-color: rgba(255, 238, 0, 0.705);  
+  display: flex; 
+  align-items: center; 
+  border-radius: 10px; 
+  height: 100px;
+}
+
+.top_letter{
+  padding-left: 10px; 
+  font-weight: bold; 
+  font-size: 19;
+}
+
+.wrap_div{
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+#my_form{
+  display: flex; 
+  flex-wrap: nowrap; 
+  flex-direction: column;  
+  width: 18%;
+  border-radius: 7px; 
+  height: 375px;
+}
+
+#first_name{
+  width: 90%; 
+  padding-left:7%; 
+}
+
+#name_label{
+  display: flex; 
+  justify-content:flex-start; 
+  padding-bottom: 10px;
+}
+
+#food_pref{
+  width: 90%; 
+  padding-left:7%;
+}
+
+#food_label{
+  display: flex; 
+  justify-content:flex-start; 
+  padding-bottom: 10px;
+}
+
+.veggie_text{
+  padding-left: 9%; 
+  font-weight: bold; 
+  font-size: 15; 
+  padding-bottom: 10px;
+}
+
+#radio_option{
+  padding-left: 9%; 
+  padding-bottom: 20px;
+}
+
+#empty_space{
+  margin-right: 7%; 
+  flex-grow: 0;
+}
+
+#something_container{
+  background-color: white; 
+  width: 50%; 
+  border-radius: 5px; 
+  align-items: center; 
+  height: 80px;
+}
