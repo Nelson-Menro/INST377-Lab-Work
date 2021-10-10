@@ -19,7 +19,7 @@ async function windowsAction() {
     // eslint-disable-next-line no-template-curly-in-string
     // eslint-disable-next-line arrow-body-style
     const html = matchedArray.map((place) => {
-      return `<li><span>${place.name}<br>${place.category}<br>${place.address_line_1}<br>${place.city}<br>${place.zip}<br></span></li>`;
+      return `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li>`;
     }).join('');
     suggestions.innerHTML = html;
   }
