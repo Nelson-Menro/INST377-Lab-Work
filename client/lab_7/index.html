@@ -3,19 +3,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 6: Nelson Mendez</title>
+    <title>Lab 7: Nelson Mendez</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1>Lab 6</h1>
+    <h1 id="labTitle">Lab 7 Nelson Mendez</h1>
+    <br>
 
-    <form action="">
-    <input type="text" id="search" name="search"><br><br>
-    </form>
-    <ul class="suggestions">
+    <div id="topSection">
 
-    </ul>
+
+    <div class="columns">  
+      <div class="column is-two-fifths" style="">
+        <div style="">
+            <form action="">
+                <input type="text" id="search" name="search" class="is-one-quarter"><br><br>
+            </form>
+            <ul class="suggestions">
+
+            </ul>
+        </div>
+        
+    </div>  
+    <div id="mapid" class="column is-half"></div>
+    </div>  
+
+        
+    </div>
+    
+    
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 </body>
 </html>

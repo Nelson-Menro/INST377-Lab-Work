@@ -1,0 +1,28 @@
+#labTitle{
+    margin-left: 20px;
+}
+#mapid { 
+    height: 350px; 
+    width: 350px;
+}
+
+#topSection{
+    margin-left: 20px;
+
+}
+
+.emptySpace{
+    width: 20px;
+}
+
+.suggestions{
+    margin-left:20px;
+}
+
+li{
+    background-color: #354baf;
+    color: rgb(224, 172, 0);
+    border-radius: 6px;
+    border-style: ridge;
+    border-color: #049979d5;
+}

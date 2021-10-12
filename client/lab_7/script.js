@@ -19,7 +19,7 @@ async function windowsAction() {
     // eslint-disable-next-line no-template-curly-in-string
     // eslint-disable-next-line arrow-body-style
     const html = matchedArray.map((place) => {
-      return `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li>`;
+      return `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li><br>`;
     }).join('');
     suggestions.innerHTML = html;
   }
@@ -30,6 +30,17 @@ async function windowsAction() {
   searchInput.addEventListener('keyup', (evt) => {
     displayMatches(evt);
   });
+
+  const mymap = L.map('mapid').setView([38.989, -76.93], 12);
+  const ACCESSTOKEN = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+  L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${ACCESSTOKEN}`, {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token'
+  }).addTo(mymap);
 }
 
 window.onload = windowsAction();
