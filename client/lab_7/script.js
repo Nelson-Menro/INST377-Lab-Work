@@ -9,7 +9,7 @@ async function windowsAction() {
   function searchMatches(wordToMatch, cities) {
     return cities.filter((place) => {
       const regex = new RegExp(wordToMatch, 'gi');
-      return place.zip.match(regex) || place.category.match(regex) || place.name.match(regex);
+      return place.zip.match(regex);
     });
   }
 
