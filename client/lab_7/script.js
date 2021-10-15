@@ -40,8 +40,9 @@ async function windowsAction() {
 
   function displayMatches(event) {
     const matchedArray = searchMatches(event.target.value, cities);
+    const shortList = matchedArray.slice(0, 5);
     // eslint-disable-next-line arrow-body-style
-    const html = matchedArray.map((place) => {
+    const html = shortList.map((place) => {
       return `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li><br>`;
     }).join('');
     suggestions.innerHTML = html;
@@ -49,10 +50,16 @@ async function windowsAction() {
 
   const searchInput = document.querySelector('#search');
 
+  searchInput.addEventListener('input', (evt) => {
+    displayMatches(evt);
+  });
+
+  /*
   searchInput.addEventListener('change', displayMatches);
   searchInput.addEventListener('keyup', (evt) => {
     displayMatches(evt);
   });
+  */
 }
 
 window.onload = windowsAction();
