@@ -7,10 +7,7 @@ async function windowsAction() {
 
   // eslint-disable-next-line no-shadow
   function searchMatches(wordToMatch, cities) {
-    return cities.filter((place) => {
-      const regex = new RegExp(wordToMatch, 'gi');
-      return place.zip.match(regex);
-    });
+    return cities.filter((place) => place.zip === wordToMatch);
   }
 
   function placeMarkers() {
@@ -38,21 +35,23 @@ async function windowsAction() {
 
   const suggestions = document.querySelector('.suggestions');
 
-  function displayMatches(event) {
+  function filterFunction(event) {
+    suggestions.innerHTML = '';
     const matchedArray = searchMatches(event.target.value, cities);
     const shortList = matchedArray.slice(0, 5);
     // eslint-disable-next-line arrow-body-style
-    const html = shortList.map((place) => {
-      return `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li><br>`;
-    }).join('');
-    suggestions.innerHTML = html;
+
+    let list = '';
+    shortList.forEach((place) => {
+      L.marker([73, -0.09]).addTo(mymap);
+      list += `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li><br>`;
+    });
+    suggestions.innerHTML = list;
   }
 
   const searchInput = document.querySelector('#search');
 
-  searchInput.addEventListener('input', (evt) => {
-    displayMatches(evt);
-  });
+  searchInput.addEventListener('input', (evt) => { filterFunction(evt); });
 
   /*
   searchInput.addEventListener('change', displayMatches);
