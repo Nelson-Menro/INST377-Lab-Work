@@ -3,20 +3,11 @@
 async function windowsAction() {
   const endPoint = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   const cities = await endPoint.json();
-  const submitButton = document.querySelector('#submitButton');
 
   // eslint-disable-next-line no-shadow
   function searchMatches(wordToMatch, cities) {
     return cities.filter((place) => place.zip === wordToMatch);
   }
-
-  function placeMarkers() {
-    console.log('test!');
-  }
-
-  submitButton.addEventListener('click', (evt) => {
-    placeMarkers();
-  });
 
   function mapInit() {
     mymap = L.map('mapid').setView([38.989, -76.93], 12);
@@ -39,26 +30,33 @@ async function windowsAction() {
     suggestions.innerHTML = '';
     const matchedArray = searchMatches(event.target.value, cities);
     const shortList = matchedArray.slice(0, 5);
-    // eslint-disable-next-line arrow-body-style
 
     let list = '';
-    shortList.forEach((place) => {
-      L.marker([73, -0.09]).addTo(mymap);
-      list += `<li><span>${place.name}<br>${place.category}<br><i>${place.address_line_1}</i><br><i>${place.city}</i><br><i>${place.zip}</i><br></span></li><br>`;
+    shortList.forEach((item) => {
+      const point = item.geocoded_column_1;
+      if (!point || !point.coordinates) {
+        return;
+      }
+
+      const latlong = point.coordinates;
+      const marker = latlong.reverse();
+
+      list += `<li><span>${item.name}<br>${item.category}<br><i>${item.address_line_1}</i><br><i>${item.city}</i><br><i>${item.zip}</i><br></span></li><br>`;
+      L.marker(marker).addTo(mymap);
     });
+
     suggestions.innerHTML = list;
   }
 
   const searchInput = document.querySelector('#search');
 
+  function clearFunction(evt) {
+    if (evt.target.value === '') {
+      suggestions.innerHTML = '';
+    }
+  }
   searchInput.addEventListener('input', (evt) => { filterFunction(evt); });
-
-  /*
-  searchInput.addEventListener('change', displayMatches);
-  searchInput.addEventListener('keyup', (evt) => {
-    displayMatches(evt);
-  });
-  */
+  searchInput.addEventListener('input', (evt) => { clearFunction(evt); });
 }
 
 window.onload = windowsAction();
